@@ -7,13 +7,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TopNavBarComponent } from './Components/top-nav-bar/top-nav-bar.component';
+import { SideNavBarComponent } from './Components/side-nav-bar/side-nav-bar.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopNavBarComponent
+    TopNavBarComponent,
+    SideNavBarComponent
   ],
   imports: [
     BrowserModule,
