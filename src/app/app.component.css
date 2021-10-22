@@ -1,0 +1,26 @@
+
+  :host {
+    font-size: 14px;
+    font-family: Roboto, "Helvetica Neue";
+    color: #333;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+
+
+  .toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: white;
+    font-weight: 600;
+  }
+
+
