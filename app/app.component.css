@@ -1,0 +1,26 @@
+/* this is not working for some reason */
+/* * {} is the same */
+body {
+	margin: 0;
+	padding: 0;
+	/* background-color: powderblue; */
+	/* nothing seems to work in this block */
+}
+
+div#custom-background {
+	width: 100%;
+	height: auto;
+	padding: 1% 2%;
+	background-color: powderblue;
+}
+
+div.some-text {
+	color: deeppink;
+	font-weight: bold;
+	font-size: 2em;
+}
+
+span#warning {
+	color: white;
+	background-color: red;
+}

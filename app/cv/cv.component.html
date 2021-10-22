@@ -1,0 +1,38 @@
+<!-- be very careful, expecially when processing anything obtained from db, 
+must use standard JSON notation to access the data eg. something["here"]-->
+<div id="custom-background">
+
+	<div class="some-text">
+		<div id="menu">Menu</div>
+		<div id="search">
+			<form action="something.php" method="GET">
+			  <input type="text" placeholder="Search.." name="search">
+			  <button type="submit"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+		<button id="filter-button"><i class="fa fa-filter"></i></button>
+		<div id="cards-grid">
+			<div class="single-card" *ngFor="let cv of cv_chunck">
+
+				<div class="picture">
+					<!-- <img class="applicant-photo" src="assets/images/avraham.png" alt="photo of job applicant"> -->
+					<!-- href="C:/Users/User/Desktop/bootcamp/client/Pearl/src/assets/cv/dummy_cv.pdf" target="_blank" -->
+					<a class="link_show-cv" onclick="window.open('assets/cv/dummy_cv.pdf')">
+					<img class="applicant-photo" src="{{cv['photo']}}" alt="photo of job applicant">
+					</a>
+					<!-- ng-src doesn't work -->
+				</div>
+				<div class="cv-details">
+					<ul>
+						<li><b>Expertise:</b> {{ cv["expertise"] }}</li>
+						<li><b>Highest Education:</b> {{ cv["education_level"] }}</li>
+						<li><b>Working Experience:</b> {{ cv["working_experience"] }}</li>
+						<li><b>Personality:</b> {{ cv["personality"] }}</li>
+						<!-- <li>RM {{ item }}</li> -->
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+</div>
