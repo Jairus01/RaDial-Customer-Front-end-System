@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ManageVacancyComponent } from './manage-vacancy/manage-vacancy.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent
+    DashboardComponent,
+    ManageVacancyComponent
   ],
   imports: [
     BrowserModule,
