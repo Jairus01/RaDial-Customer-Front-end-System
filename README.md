@@ -1,5 +1,6 @@
 # Swinburne-FYP
 
+## Pakages 
 npm install @angular/cli
 
 ng add @ng-bootstrap/ng-bootstrap
