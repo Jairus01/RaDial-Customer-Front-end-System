@@ -2,7 +2,7 @@ div#custom-background {
 	width: 100%;
 	height: auto;
 	padding: 1% 2%;
-	background-color: #dedede; /*gray*/
+	background-color: lightgray; /*gray*/
 }
 
 div.some-text {
@@ -29,7 +29,7 @@ div#search input, div#search button, button#filter-button {
 div#search input {
 	width: 85%;
 	height: 32px;
-	border: 2px solid #f4dd05;
+	border: 2px solid #FBD036 ;
 }
 
 div#search input:focus {
@@ -40,7 +40,7 @@ div#search button {
 	border: none;
 	cursor: pointer;
 	display: inline;
-	background-color: #f4dd05;
+	background-color: #FBD036 ;
 	width: 40px;
 	height: 40px;
 	border: 2px solid orange;
@@ -59,7 +59,7 @@ button#filter-button {
 	position: fixed;
 	right: 3%;
 	top: 23%;
-	background-color: #f4dd05;
+	background-color: #FBD036 ;
 	border-radius: 5px;
 	border: 2px solid orange;
 	font-size: 2.5em;
@@ -71,46 +71,4 @@ div#cards-grid {
 	height: auto;
 	margin: 2% auto;
 	padding: 2% 0 2% 5%;
-}
-
-div.single-card {
-	border: 2px solid #f4dd05;
-	/* border: 2px solid orange; */
-	border-radius: 25px;
-	overflow: hidden;
-	background-color: #f4dd05;
-	min-width: 175px;
-	min-height: 500px;
-	width: 28%;
-	height: auto;
-	/* height: 500px; */
-	display: inline-block;
-	margin: 3% 4% 3% 0;
-}
-
-a.link_show-cv {
-	cursor: pointer;
-}
-
-img.applicant-photo {
-	max-height: 300px;
-	max-width: 300px;
-	width: 100%;
-	height: auto;
-	display: block;
-	margin-bottom: 2%;
-}
-
-div.cv-details {
-	background-color: #f4dd05; /* dark yellow */
-	padding: 2% 4%;
-}
-
-
-div.cv-details ul li {
-	font-family: sans-serif;
-	font-size: 1.1em;
-	margin-top: 1%;
-	margin-bottom: 1%;
-	
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { CvCardComponent } from './../cv-card/cv-card.component';
+// import { TestModalComponent } from "./../test-modal/app-test-modal";
 import { PostObject, CommonService } from "./../common.service";
 
 @Component({
@@ -21,18 +22,38 @@ export class CvComponent implements OnInit {
     // {name: "Book 2", price: "10.00", color: "gray", image_src: "assets/153-1535604_job-applicant-icon.png"},
   // ];
   
-  cv_chunck = [];
+  //cv_chunck = [];
   
   // this part is changed
+  // constructor( private cs:CommonService, private modalService: NgbModal ) { }
   constructor( private cs:CommonService ) { }
 
   // added more stuff to process once landed on the page
   // refer to home.component.ts, don't redefine
   ngOnInit(): void {
-	  this.cs.list().subscribe( data_chunck => {
-		  this.cv_chunck = (data_chunck as PostObject).data;
-		  console.log( data_chunck );
-	  } );
+	  //this.cs.list().subscribe( data_chunck => {
+		//  this.cv_chunck = (data_chunck as PostObject).data;
+		//  console.log( data_chunck );
+	  //} );
   }
+
+	// open(content:any) {
+	// this.modalService.open(content, {ariaLabelledBy: 'myModal'}).result.then((result) => {
+	  // this.closeResult = `Closed with: ${result}`;
+	// }, (reason) => {
+	  // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+	// });
+	// }
+
+	// private getDismissReason(reason: any): string {
+	// if (reason === ModalDismissReasons.ESC) {
+	  // return 'by pressing ESC';
+	// } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+	  // return 'by clicking on a backdrop';
+	// } else {
+	  // return `with: ${reason}`;
+	// }
+	// }
+
 
 }
