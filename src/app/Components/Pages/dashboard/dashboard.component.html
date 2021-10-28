@@ -1,0 +1,45 @@
+<app-top-nav-bar></app-top-nav-bar>
+
+<div class="dashboard-header">
+    <h1>Dashboard</h1>
+</div>
+
+<app-side-nav-bar></app-side-nav-bar>
+
+
+<div class = "dashboard-container" style="width:88%; background-color: white; height: 100%; display: inline-block; transform:translateY(-168px)">
+
+    <div class="card-container">
+        <div class="card">
+            <h1>8</h1>
+            <span>Active Jobs</span>
+            <span><a href="/"><u>View ></u></a></span>
+        </div>     
+        <div class="card" >
+            <h1>8</h1>
+            <span>View Applicants</span>
+            <a href="/"><u>View ></u></a>
+        </div>
+        <div class="card" >
+            <h1>800</h1>
+            <span>Credit Balance</span>
+            <a href="/"><u>View ></u></a>
+        </div>
+    </div>
+    <select name="jobs" style="position:absolute; left:490px; top:330px;">
+        <option value="Programmer">Programmer</option>
+        <option value="Designer">Designer</option>
+        <option value="CEO">CEO</option>
+        <option value="Manager">Manager</option>
+      </select>
+    <div class="card-container">
+        <div class="chart-card">
+            <app-dashboard-chart></app-dashboard-chart>
+        </div>     
+        <div class="service-card">
+            <span>Service Subscriptions </span>
+        </div>
+    </div>
+</div>
+
+<app-dashboard-chart></app-dashboard-chart>
