@@ -10,13 +10,16 @@
   /* Float four columns side by side */
   .column {
     float: left;
-    width: 33%;
+    width: 23%;
     padding-left: 30px;
     padding-bottom: 30px;
   }
   
   /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 5px;}
+  .row {
+    margin: 0 5px;
+    justify-content: center;
+}
   
   /* Clear floats after the columns */
   .row:after {
@@ -36,8 +39,8 @@
   
   /* Style the counter cards */
   .card {
-    width: 400px;
-    height: 500px;
+    width: 350px;
+    height: 450px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     padding: 20px;
     text-align: center;
@@ -72,7 +75,7 @@
   }
   
   .mydiv{
-    font-size:50px;
+    font-size:40px;
   }
   .mydiv a
   {
