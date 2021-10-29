@@ -1,0 +1,127 @@
+
+
+
+input[type=text]{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 2px solid #f4dd05;
+  box-sizing: border-box; 
+  height:50px;
+  border-radius:5px;
+}
+
+
+textarea{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #f4dd05;
+  box-sizing: border-box; 
+  border-radius:5px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #f4dd05;
+  color: white;
+  font-size:25px;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+h1{
+	text-align:center;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+
+.budget{
+
+    font-size:20px;
+    margin-right:55px;
+}
+label{
+font-size:12px;
+}
+
+
+
+ 
+
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 2% auto; 
+  padding:2% ;
+
+  border-radius:24px;
+  width: 40%; 
+}
+
+
+ .half-container {
+    width: 45%;
+
+    float: left;
+  }
+.left-container{
+padding-right:5%;
+
+}
+.right-container{
+	border-left: 1px solid #f4dd05;
+padding-left:2%;
+}
+.left{
+	padding-right:5%;
+}.right{
+	padding-left:2%;
+}
+  .half {
+    width: 46%;
+    float: left;
+  }
+
+
+  .example-h2 {
+    margin: 0 8px 16px;
+  }
+ 
+  
+  .example-margin {
+    margin: 8px;
+  }
+  
+  .mat-slider-horizontal {
+    width: 500px;
+  }
+  
+  
+  .mat-card + .mat-card {
+    margin-top: 8px;
+  }
+  
+  .example-result-card h2 {
+    margin: 0 8px;
+  }
+
+  .dashboard-header {
+    margin-top: 50px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mat-card{
+  height: 800px;
+}
