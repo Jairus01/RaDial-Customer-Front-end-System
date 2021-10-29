@@ -1,0 +1,107 @@
+
+<mat-horizontal-stepper>
+    <mat-step label="Step 1">
+        
+
+
+  <mat-card>
+    <mat-card-content class="modal-content">
+  
+      <form >
+       
+    
+       
+        
+            
+          <div class="half left">
+          <label for="cname">Company name</label>
+          <input type="text"  name="cname" >
+          </div>
+          <div class="half right">
+          <label for="location">Location</label>
+          <input type="text"  name="location" >
+          
+          </div>
+        
+           <label for="jobtitle">Job Title</label>
+          <input type="text"  name="jobtitle" >
+          <label for="jobdesc">Job Description</label>
+          <br>
+          <textarea name="address"  rows="5" ></textarea>
+          <br>
+         
+    
+          <button mat-button matStepperNext>Next</button>
+    
+        
+          
+      </form>
+    
+    </mat-card-content>
+  </mat-card>
+
+    </mat-step>
+     <mat-step label="Step 2" >
+        <mat-card>
+            <mat-card-content class="modal-content">
+                <form >
+    
+                      
+                         <label for="edulevel">Education Level</label>
+                        <input type="text"  name="edulevel" >
+                        <label for="personalities">Personalities</label>
+                        <input type="text"  name="personalities" >
+                        <label for="requirement">More Requirement</label>
+                        <br>
+          <textarea name="address"  rows="5" ></textarea>
+          <br>
+              
+                    <button mat-button matStepperNext>Next</button>
+              
+                  
+                    
+                </form>
+              
+            </mat-card-content>
+          </mat-card>
+       
+          
+
+    </mat-step>
+    <mat-step label="Step 3">
+        <mat-card>
+            <mat-card-content class="modal-content">
+              
+          
+                    <label for="cname" class="budget">Set your daily budget</label>
+
+                   
+                        <mat-form-field >
+                            <input matInput type="number" [(ngModel)]="value">
+                          </mat-form-field>
+                    
+                
+                
+                
+           
+      
+            
+            
+                <div class="example-label-container">
+
+                  <mat-slider
+                  class="example-margin"
+                  [max]="max"
+                  [min]="min"
+                  [thumbLabel]="thumbLabel"
+                  [(ngModel)]="value"
+                  aria-labelledby="example-name-label">
+              </mat-slider>
+                </div>
+                <button mat-button matStepperPrevious>Back</button>
+            </mat-card-content>
+          </mat-card>
+       
+
+    </mat-step>
+  </mat-horizontal-stepper>
