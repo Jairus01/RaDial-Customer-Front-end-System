@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CvCardComponent } from './cv/cv.component';
 
 @Component({
   selector: 'app-cv-listing',
