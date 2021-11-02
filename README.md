@@ -6,5 +6,5 @@
 
 
 ## Color code
-yellow - #FBD036
+yellow - #F4DC05
 red - #FF0000
