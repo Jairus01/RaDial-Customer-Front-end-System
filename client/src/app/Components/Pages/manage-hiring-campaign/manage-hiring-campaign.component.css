@@ -1,0 +1,21 @@
+.dashboard-header {
+    margin: 50px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shorlist-card a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #FFF48E;
+    color: black;
+    text-align: center;
+    margin:20px;
+    width: 200px;
+    height: 170px;
+}
+.shorlist-card a span:first-child{
+    display: block;
+    padding-top: 50px;
+}
