@@ -28,12 +28,14 @@
     width: 150px;
 }
 
-table button{
+table button,
+table a{
     background-color: #F4DC05;
     color: white;
     border-radius: 0.4vw;
     margin:0 10px;
     width: 150px;
+    text-decoration: none;
 }
 
 table td, table th{
