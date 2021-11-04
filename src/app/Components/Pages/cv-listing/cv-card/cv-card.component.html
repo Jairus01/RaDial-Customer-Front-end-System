@@ -1,6 +1,6 @@
 <!-- be very careful, expecially when processing anything obtained from db, 
 must use standard JSON notation to access the data eg. something["here"]-->
-<div class="single-card" *ngFor="let cv of cv_chunck">
+<div class="single-card" *ngFor="let cv of cv_chunck | filter:searchText">
 {{closeResult}}
 	<div class="picture">
 		<!-- <button (click)="open(content)">View CV</button> -->

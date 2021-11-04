@@ -5,7 +5,10 @@ div.single-card {
 	overflow: hidden;
 	background-color: #FBD036 ;
 	min-width: 175px;
-	min-height: 500px;
+	/* min-height: 500px; */
+	/* max-width: 175px; */
+	max-height: 500px;
+	/* overflow-y: scroll; */
 	width: 28%;
 	height: auto;
 	/* height: 500px; */
@@ -25,6 +28,9 @@ img.applicant-photo {
 div.cv-details {
 	background-color: #FBD036 ; /* dark yellow */
 	padding: 2% 4%;
+	max-height: 200px;
+	overflow-y: scroll;
+	padding: 5% 0;
 }
 
 
@@ -33,5 +39,4 @@ div.cv-details ul li {
 	font-size: 1.1em;
 	margin-top: 1%;
 	margin-bottom: 1%;
-	
 }
