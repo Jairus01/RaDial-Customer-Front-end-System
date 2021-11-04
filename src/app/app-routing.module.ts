@@ -4,7 +4,6 @@ import { HomepageComponent } from './Components/Pages/homepage/homepage.componen
 import { LoginComponent } from './Components/Pages/login/login.component';
 import { RegisterComponent } from './Components/Pages/register/register.component';
 import { ResetPasswordComponent } from './Components/Pages/reset-password/reset-password.component';
-import { CvListingComponent } from './Components/Pages/cv-listing/cv-listing.component';
 import { SubscribeServiceComponent } from './Components/Pages/subscribe-service/subscribe-service.component';
 import { DashboardComponent } from './Components/Pages/dashboard/dashboard.component';
 import { PostVacancyComponent } from './Components/Pages/post-vacancy/post-vacancy.component';
@@ -23,7 +22,6 @@ const routes: Routes = [
   {path: 'register', component:RegisterComponent},
   {path: 'reset-password', component:ResetPasswordComponent},
   {path: 'register', component:RegisterComponent},
-  {path: 'cv-listing', component:CvListingComponent},
   {path: 'subscribe-service', component:SubscribeServiceComponent},
   {path: 'dashboard', component:DashboardComponent},
   {path: 'post-vacancy', component:PostVacancyComponent},

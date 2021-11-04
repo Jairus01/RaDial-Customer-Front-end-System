@@ -58,7 +58,6 @@ import { SubscribeServiceComponent } from './Components/Pages/subscribe-service/
 import { LoginComponent } from './Components/Pages/login/login.component';
 import { RegisterComponent } from './Components/Pages/register/register.component';
 import { ResetPasswordComponent } from './Components/Pages/reset-password/reset-password.component';
-import { CvListingComponent } from './Components/Pages/cv-listing/cv-listing.component';
 import { DashboardComponent } from './Components/Pages/dashboard/dashboard.component';
 import { PostVacancyComponent } from './Components/Pages/post-vacancy/post-vacancy.component';
 import { ManageVacancyComponent } from './Components/Pages/manage-vacancy/manage-vacancy.component';
@@ -72,7 +71,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomepageComponent } from './Components/Pages/homepage/homepage.component';
 import { DashboardChartComponent } from './Components/Shared/dashboard-chart/dashboard-chart.component';
 
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -82,7 +81,6 @@ import { DashboardChartComponent } from './Components/Shared/dashboard-chart/das
     LoginComponent,
     RegisterComponent,
     ResetPasswordComponent,
-    CvListingComponent,
     DashboardComponent,
     PostVacancyComponent,
     ManageVacancyComponent,
@@ -153,6 +151,7 @@ import { DashboardChartComponent } from './Components/Shared/dashboard-chart/das
     OverlayModule,
     PortalModule,
     ScrollingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
