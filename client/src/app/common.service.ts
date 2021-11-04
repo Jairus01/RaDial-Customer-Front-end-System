@@ -11,6 +11,11 @@ export class CommonService {
   list() {
     return this.http.get(this.url)
   }
+  
+  listFullCV () {
+	  return this.http.get( this.url + "full_cv_details" );
+  }
+  
   save(d:any) {
     return this.http.post(this.url,d)
   }
