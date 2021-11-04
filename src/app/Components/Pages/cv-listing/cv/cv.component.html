@@ -3,16 +3,14 @@
 	<div class="some-text">
 		<!-- <div id="menu">Menu</div> -->
 		<div id="search">
-			<form action="something.php" method="GET">
-			  <input type="text" placeholder="Search.." name="search">
-			  <button type="submit"><i class="fa fa-search"></i></button>
-			</form>
+			  <input type="text" placeholder="Search.." [(ngModel)]="searchText">
+			  <p>cv --> cv-card: {{ searchText }}</p>
 		</div>
 		<button id="filter-button"><i class="fa fa-filter"></i></button>
 		
 		<!-- make this whole part modular simport directly from a module-->
 		<div id="cards-grid">
-			<app-cv-card></app-cv-card>
+			<app-cv-card [searchText]="searchText"></app-cv-card>
 		</div>
 	</div>
 	
