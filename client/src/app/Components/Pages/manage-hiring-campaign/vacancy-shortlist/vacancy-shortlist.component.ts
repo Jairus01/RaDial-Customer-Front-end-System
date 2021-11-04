@@ -55,6 +55,11 @@ export class VacancyShortlistComponent implements OnInit {
     }
   }
 
+  
+  onDrop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.receivedApplicants, event.previousIndex, event.currentIndex);
+  }
+
   openDialog(iname:string) {
     const dialogRef = this.dialog.open(InterviewScheduleDialogComponent, {data:{name: iname}});
 
