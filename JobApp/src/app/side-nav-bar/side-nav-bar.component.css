@@ -1,0 +1,64 @@
+.side-bar{
+    height: 100%;
+    width: 200px;
+    background-color: #fff;
+    z-index: 1;
+    overflow: auto;
+    display: inline-block;
+}
+
+.side-bar a,.side-bar span{
+    width: 100%;
+    display: block;
+    padding: 20px 16px;
+    text-align: left;
+    white-space: normal;
+    float: none;
+    border:none;
+    cursor: pointer;
+    outline: 0;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+    color:black;
+
+}
+
+.side-bar a:hover{
+    color: #FBD036;
+}
+
+
+.side-bar .button-gray{
+    background-color: #f4f4f4;
+
+}
+.side-bar .logout-button{
+    background-color: #FB7373;
+    color:white;
+}
+
+
+.dropdown-container {
+    display: none;
+    background-color: #f4f4f4;
+    padding-left: 8px;
+  }
+
+  .side-bar input
+{
+  display: block;
+  width: 220px;
+  height: 55px;
+  position: absolute;
+
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+.side-bar input:checked ~ .dropdown-container
+{
+  display: block;
+}
+
