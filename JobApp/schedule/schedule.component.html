@@ -1,0 +1,131 @@
+<app-top-nav-bar></app-top-nav-bar>
+<div class="header">
+    <h2>Interview Schedule</h2>
+</div>
+<body>
+<app-side-nav-bar></app-side-nav-bar>
+
+<div class="card-container" style="width:88%; height: 100%; background-color: white; display: inline-block;padding: 40px; transform: translateY(-1000px); ">
+    <mat-tab-group>
+        <mat-tab label="Create Interview Group"> 
+                <button class = "button" (click)="open(content)">Create Interview Group</button>
+    
+                <div class="group-card">
+                    <a href="" *ngFor="let a of allGroup | filter : 'status' : 'open' ; let i = index"> 
+                        <span>Group {{i+1}} {{a.name}}&nbsp;</span><br>
+                        <span>{{a.date}}</span><br>
+                        <span>{{a.session}} &nbsp; {{a.time}}</span><br>
+                    </a>
+                </div>
+        </mat-tab>
+        <mat-tab label="Upcoming Interview Schedule">
+            <div class="ex1">
+            <div class="table-card">
+                <table class="table" *ngFor="let a of allGroup | filter: 'date': today,'status' : 'open'; let i = index">
+                    <thead>
+                        <tr>
+                            <th colspan="3" style="vertical-align: middle;"> Group {{i+1}} &nbsp;{{a.name}}<br>{{a.date}} &nbsp;{{a.time}}</th>
+                            <th scope="col" style="text-align: right;"><button class = "button" (click) = "update(a)">Lock Session</button></th>
+                        </tr>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th >Applicant Name</th>
+                            <th >Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="
+                        let s of allinterview | filter: 'groupid': a._id;
+                        let i = index;">
+                            <td scope="row">{{i+1}}</td>
+                            <td>{{s.name}}</td>
+                            <td>{{s.phone}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan = "4" style="background-color:#DEDEDE">End of rows</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </mat-tab>
+        <mat-tab label="All Interview Schedule"> 
+            <div class="ex1">
+                <div class="table-card">
+                    <table class="table" *ngFor="let a of allGroup | filter : 'status' : 'open'; let i = index">
+                        <thead>
+                            <tr>
+                                <th colspan="3" style="vertical-align: middle;"> Group {{i+1}} &nbsp;{{a.name}}<br>{{a.date}} &nbsp;{{a.time}}</th>
+                                <th scope="col" style="text-align: right;"><button class = "button">Lock Session</button></th>
+                            </tr>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th >Applicant Name</th>
+                                <th >Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="
+                            let s of allinterview | filter: 'groupid': a._id;
+                            let i = index">
+                                <td scope="row">{{i+1}}</td>
+                                <td>{{s.name}}</td>
+                                <td colspan="2">{{s.phone}}</td>
+                            </tr>
+                            <tr>
+                                <td colspan = "4" style="background-color:#DEDEDE">End of rows</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </mat-tab>
+      </mat-tab-group>       
+</div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Create Interview Group</h4>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <form name="myForm" role="form" novalidate (ngSubmit)="onSubmit(iForm)" #iForm="ngForm">
+        <div class="modal-body">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="name" name="name"  [(ngModel)]="scheduleGroup.name"  required/>
+                </div>
+                
+                
+                <label for="date">Date</label>
+                <div class="input-group">
+                    <input type="date" id="date"  name="date"  [(ngModel)]="scheduleGroup.date"  class="form-control" required/>
+                </div>
+                
+                
+                <label for="session">Session</label>
+                <div class="input-group">
+                    <select id="session"  name="session"  class="form-control"  [(ngModel)]="scheduleGroup.session" required>
+                        <option value="Morning">Morning</option>
+                        <option value="Afternoon">Afternoon</option>
+                    </select>
+                </div>
+               
+                
+                <label for="time">Time</label>
+                <div class="input-group">
+                    <input type="time" id="time" name="time" class="form-control" [(ngModel)]="scheduleGroup.time" min="08:00" max="13:00" required/> 
+                </div>
+                
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btnSave" id="btnAdd" >Save</button>
+        </div>
+    </form>
+  </ng-template>
+
+
+  <router-outlet></router-outlet>

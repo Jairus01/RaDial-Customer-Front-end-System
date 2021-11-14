@@ -5,13 +5,15 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { InterviewComponent } from './interview/interview.component';
 import { InterviewListComponent } from './interview-list/interview-list.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path : 'service', component:SubscribeServiceComponent},
   {path : 'homepage', component:HomepageComponent},
   {path : 'interview', component:InterviewComponent},
   {path : 'interviewlist', component:InterviewListComponent},
-  {path : 'schedule', component:ScheduleComponent}
+  {path : 'schedule', component:ScheduleComponent},
+  {path : 'test', component:TestComponent}
 ];
 
 @NgModule({

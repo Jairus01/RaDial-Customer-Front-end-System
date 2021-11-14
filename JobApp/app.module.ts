@@ -16,12 +16,15 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatToolbarModule } from '@angular/material/toolbar'; 
 import { MatButtonModule } from '@angular/material/button';
 import { InterviewListComponent } from './interview-list/interview-list.component';
-import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { FormsModule } from '@angular/forms';
 import { DatePickerModule, TimePickerModule } from '@syncfusion/ej2-angular-calendars';
 import { ScheduleComponent } from './schedule/schedule.component';
-import { BlablaComponent } from './blabla/blabla.component';
-
+import { TestComponent } from './test/test.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SearchPipe } from './schedule/searchPipe';
+import {ScrollingModule} from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,8 @@ import { BlablaComponent } from './blabla/blabla.component';
     TopNavBarComponent,
     InterviewListComponent,
     ScheduleComponent,
-    BlablaComponent
+    TestComponent,
+    SearchPipe
     
   ],
   imports: [
@@ -49,7 +53,10 @@ import { BlablaComponent } from './blabla/blabla.component';
     NgxMaterialTimepickerModule,
     FormsModule,
     DatePickerModule,
-    TimePickerModule
+    TimePickerModule,
+    MatTabsModule,
+    BrowserAnimationsModule,
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
