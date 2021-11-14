@@ -1,0 +1,13 @@
+div#search {
+	width: 100%;
+	margin: 2% auto 0 auto;
+	/* border: 1px solid black; */
+	text-align: center;
+}
+
+div#search input {
+	width: 50%;
+	height: 40px;
+	text-align: center;
+	font-size: 1.2em;
+}

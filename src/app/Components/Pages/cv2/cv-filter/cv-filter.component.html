@@ -1,0 +1,60 @@
+<!-- filtering form -->
+
+<button id="filter-button" (click)="triggerFilterPanel()"><i class="fa fa-filter"></i></button>
+<div class="form-group" *ngIf="showFilterPanel">
+	<label class="filter-criteria">Age</label>
+	<p>
+		<input [(ngModel)]="ageMin" type="number" class="numeric">
+		~
+		<input [(ngModel)]="ageMax" type="number" class="numeric">
+		years old (inclusive)
+	</p>
+	
+	<label class="filter-criteria">Highest Education</label>
+	<p>
+		<select [(ngModel)]="chosenHighestEdu">
+			<option *ngFor="let edu of highest_edu_level">{{edu}}</option>
+		</select>
+	</p>
+	
+	<label class="filter-criteria">Job Expertise</label>
+	<p>		
+		<select [(ngModel)]="chosenJobExpertise">
+			<option *ngFor="let job of jobs">{{job}}</option>
+		</select>
+	</p>
+	
+	<label class="filter-criteria">Working Experience</label>
+	<p>
+		<input [(ngModel)]="weMin" type="number" class="numeric"> 
+		~
+		<input [(ngModel)]="weMax" type="number" class="numeric"> 
+		years (inclusive)
+	</p>
+	
+	<label class="filter-criteria">Personality</label>
+	<p>
+		<select [(ngModel)]="chosenPersonality">
+			<!-- <option selected>~~Select a Personality~~</option> --> <!--doesnt work-->
+			<option *ngFor="let personality of personalities">{{personality}}</option>
+		</select>
+	</p>
+	
+	<button (click)="filterCV()">Filter</button>
+	
+	<!-- debugging -->
+	<!-- <p>Age range: {{ageMin}} ~ {{ageMax}}</p> -->
+	<!-- <p>WE range: {{weMin}} ~ {{weMax}}</p> -->
+	<p>Highest Education: {{ chosenHighestEdu }}</p>
+	<p>Job expertise: {{ chosenJobExpertise }}</p>
+	<p>Personality: {{ chosenPersonality }}</p>
+</div>
+
+<!-- filtered results -->
+<div id="cards-grid" *ngIf="filterButtonClicked && showFilterPanel">
+<!-- <p>Something should show up here once the cv is filtered</p> -->
+	<app-cv-card2 
+	*ngFor="let singleCV of filtered_cv"
+	[cv]="singleCV"
+	></app-cv-card2>
+</div>

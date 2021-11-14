@@ -1,0 +1,72 @@
+div#custom-background {
+	width: 100%;
+	height: auto;
+	padding: 1% 2%;
+	background-color: #DEDEDE; /*gray*/
+}
+
+div.some-text {
+	min-height: 600px;
+}
+
+input.numeric {
+	width: 50px;
+}
+
+div#menu {
+	width: 100%;
+	height: 25px;
+	background-color: white;
+}
+
+div#search {
+	width: 100%;
+	margin: 2% auto 0 auto;
+	/* border: 1px solid black; */
+	text-align: center;
+}
+
+div#search input, div#search button, button#filter-button {
+	font-size: 1.5em;
+}
+
+div#search input {
+	width: 85%;
+	height: 32px;
+}
+
+div#search input:focus {
+	border: 2px solid orange;
+}
+
+div#search button {
+	border: none;
+	cursor: pointer;
+	display: inline;
+	background-color: #F4DC05 ;
+	width: 40px;
+	height: 40px;
+	border: 2px solid orange;
+	border-radius: 5px;
+	margin-left: 1%;
+}
+
+div#search button:hover, button#filter-button:hover {
+	background: orange;
+	border: 2px solid brown;
+}
+
+div#search input {
+	width: 50%;
+	text-align: center;
+	padding: 1.3% 2%;
+	font-size: 1.2em;
+}
+
+div#cards-grid {
+	/* border: 1px solid black; */
+	width: 80%;
+	height: auto;
+	margin: 2% auto;
+	padding: 2% 0 2% 5%;
+}

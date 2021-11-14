@@ -1,0 +1,22 @@
+<div class="single-card">
+	<div class="picture">
+		<img class="applicant-photo" src="{{cv.photo}}" alt="photo of job applicant">
+		<a href="{{cv.cv_path}}" target="_blank" 
+			class="view-cv-link" (click)="deductCreditsViewCV(10)"
+		>View CV</a>
+		<button class="lock-cv-button">Lock CV</button> <!-- styling is the same as View CV -->
+		<!-- lock cv will put everything to cart or sth, the real credits deduction is from the shopping cart -->
+	</div>
+	<div class="cv-details">
+		<ul>
+			<!-- <li><b>Name:</b> {{ cv["_id"] }}</li> -->
+			<li><b>Age:</b> {{ cv.age }} years old</li>
+			<li><b>Expertise:</b> {{ cv.expertise }}</li>
+			<li><b>Highest Education:</b> {{ cv.education_level }}</li>
+			<li><b>Working Experience:</b> {{ cv.working_experience }} years</li>
+			<li><b>Personality:</b> {{ cv.personality }}</li>
+
+		</ul>
+	</div>
+
+</div>

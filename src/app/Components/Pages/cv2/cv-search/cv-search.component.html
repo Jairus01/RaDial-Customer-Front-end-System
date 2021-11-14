@@ -1,0 +1,15 @@
+<div id="search">
+	  <input type="text" placeholder="Search.." [(ngModel)]="searchText">
+	  <p>cv --> cv-card: {{ searchText }}</p>
+	  <!-- <p>Filter to the right side</p> -->
+	  <!-- <p>Limit amount of CV shown acc. to user's package</p> -->
+	  <!-- <p>Add another button to "lock" the cv</p> -->
+</div>
+
+<div id="cards-grid" *ngIf="!hideCV">
+<!-- <p>Something should show up here once the cv is filtered</p> -->
+	<app-cv-card2 
+	*ngFor="let singleCV of cv_chunck | filter:searchText"
+	[cv]="singleCV"
+	></app-cv-card2>
+</div>

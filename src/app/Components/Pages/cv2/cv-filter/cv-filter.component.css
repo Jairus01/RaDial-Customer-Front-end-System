@@ -1,0 +1,42 @@
+button#filter-button {
+	/* font-size: 24px; */
+	float: right;
+	position: fixed;
+	right: 3%;
+	top: 23%;
+	/* background-color: #F4DC05 ; */
+	background-color: #F4DC05 ;
+	border-radius: 5px;
+	border: 2px solid orange;
+	font-size: 2.5em;
+}
+
+.form-group {
+	text-align: center;
+	background-color:#F4DC05;
+	border: 2px solid orange;
+	padding: 1% 2%;
+	width: 350px;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	height: 400px;
+	overflow-y: scroll;
+}
+
+.form-group button {
+	display: block;
+	margin: 1% auto;
+}
+
+select {
+	width: 100%;
+}
+
+input.numeric {
+	width: 55px;
+}
+
+.filter-criteria {
+	font-weight: bold;
+}
