@@ -2,19 +2,18 @@ const mongoose = require('mongoose')
 
 const Schedule = mongoose.Schema({
     name: String,
-    date: String,
-    startTime: String,
-    endTime: String
+    groupid: String,
+    phone : String
 })
 
-const mSchedule = mongoose.model('Schedule',Schedule)
+const mSchedule = mongoose.model('interview',Schedule)
 
 async function connect(){
     await mongoose.connect('mongodb://localhost:27017/testdb')
 }
 
 connect().then(()=>{
-    console.log('schedule CONNECTED!!!')
+    console.log('interview CONNECTED!!!')
 }).catch(err=>{
     console.error(err)
 })
@@ -32,7 +31,7 @@ module.exports = {
     },
     load: (key)=>{
         return new Promise((resolve,reject)=>{
-            mSchedule.findOne({_id:key}).then(data=>{
+            mSchedule.find({groupid:key}).then(data=>{
                 resolve(data)
             }).catch(err=>{
                 reject(err)
@@ -71,4 +70,5 @@ module.exports = {
             })
         })
     }
+
 }

@@ -2,8 +2,11 @@ const mongoose = require('mongoose')
 
 const group = mongoose.Schema({
     date: String,
-    morningTime: String,
-    afternoonTime: String
+    time: String,
+    name: String,
+    session: String,
+    status : String
+    
 })
 
 const sgroup = mongoose.model('ScheduleGroup',group)
@@ -41,8 +44,8 @@ module.exports = {
     },
     save: (data)=>{
         return new Promise((resolve,reject)=>{
-            let newService = new sgroup(data)
-            newService.save().then(data=>{
+            let newGroup = new sgroup(data)
+            newGroup.save().then(data=>{
                 resolve(data)
             }).catch(err=>{
                 reject(err)
