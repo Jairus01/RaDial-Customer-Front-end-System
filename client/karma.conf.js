@@ -25,7 +25,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/Rajang-Blue-Collar-Web-App'),
+      dir: require('path').join(__dirname, './coverage/Client'),
       subdir: '.',
       reporters: [
         { type: 'html' },

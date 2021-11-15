@@ -1,0 +1,55 @@
+<div id="app">
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    
+    <ul class="navbar-nav mr-auto" routerLinkActive="active">
+      <li class="nav-item">
+        <a href="*" class="nav-link" routerLink="">Home </a>
+      </li>
+      <li>
+        <a href="" class="nav-link" *ngIf="isLoggedIn" routerLink="cv-listing">CV Listing</a>
+      </li>
+      <li>
+        <a href="" class="nav-link" *ngIf="isLoggedIn" routerLink="subscribe">Service</a>
+      </li>
+      <li class="nav-item">
+        <a href="dashboard" class="nav-link" *ngIf="isLoggedIn" routerLink="dashboard">Dashboard</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link" *ngIf="isLoggedIn" routerLink="received-applicant">Received Applicant</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link" *ngIf="isLoggedIn" routerLink="post-vacancy">New Post</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link" *ngIf="isLoggedIn" routerLink="manage-vacancy">Vacancy</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link" *ngIf="isLoggedIn" routerLink="vacancy-shortlist">Shortlist</a>
+      </li>
+      <li class="nav-item">
+        <a href="" class="nav-link" *ngIf="isLoggedIn" routerLink="interview-schedule">interview</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="!isLoggedIn">
+      <li class="nav-item">
+        <a href="register" class="nav-link" routerLink="register">Sign Up</a>
+      </li>
+      <li class="nav-item">
+        <a href="login" class="nav-link" routerLink="login">Login</a>
+      </li>
+    </ul>
+
+    <ul class="navbar-nav ml-auto" *ngIf="isLoggedIn">
+      <li class="nav-item">
+        <span class="nav-link" routerLink="dashboard">{{ email }}</span>
+      </li>
+      <li class="nav-item">
+        <a href class="nav-link" (click)="logout()">LogOut</a>
+      </li>
+    </ul>
+  </nav>
+
+ 
+  
+</div>

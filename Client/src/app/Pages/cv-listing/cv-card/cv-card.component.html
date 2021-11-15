@@ -1,0 +1,31 @@
+
+<!-- be very careful, expecially when processing anything obtained from db, 
+must use standard JSON notation to access the data eg. something["here"]-->
+<div class="single-card" *ngFor="let cv of cv_chunck">
+    {{closeResult}}
+        <div class="picture">
+            <!-- <button (click)="open(content)">View CV</button> -->
+            <img id="triggerModal" class="applicant-photo" src="{{cv['photo']}}" alt="photo of job applicant">
+            <!-- <img id="triggerModal" class="applicant-photo" src="https://thispersondoesnotexist.com/" alt="photo of job applicant"> -->
+                <!-- needs to be downloaded -->
+            <!-- modal here -->
+            <a href="{{cv['cv_path']}}" target="_blank" 
+                class="view-cv-link" (click)="deductCreditsViewCV(10)"
+            >View CV</a>
+            <button class="lock-cv-button">Obtain CV</button> <!-- styling is the same as View CV -->
+            
+            <!-- ng-src doesn't work, just use src -->
+        </div>
+        <div class="cv-details">
+            <ul>
+                <!-- <li><b>Name:</b> {{ cv["_id"] }}</li> -->
+                <li><b>Expertise:</b> {{ cv["expertise"] }}</li>
+                <li><b>Highest Education:</b> {{ cv["education_level"] }}</li>
+                <li><b>Working Experience:</b> {{ cv["working_experience"] }}</li>
+                <li><b>Personality:</b> {{ cv["personality"] }}</li>
+    
+            </ul>
+        </div>
+    
+    </div>
+    

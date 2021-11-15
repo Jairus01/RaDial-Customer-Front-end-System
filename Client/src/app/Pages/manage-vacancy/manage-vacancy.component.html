@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="list row">
+        <div class="col-md-8">
+            
+                
+        </div>
+        
+        <table class="table table-hover">
+    
+            <thead>
+                <tr>
+                    <th scope="col" ></th>
+                    <th scope="col">Job Title</th>
+                    <th scope="col">Job Desc</th>
+                    <th scope="col">Start Date</th>
+                    <th scope="col">Closed Date</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+        
+            <tbody >
+                  
+                <tr *ngFor="let vacancy of vacancies; index as i" >
+                    <th class="col-xs" scope="row">						
+                      {{i+1}}
+                    </th>
+                    <td class="col-xs">{{ vacancy.job_title }}</td>
+                    <td class="col-md">{{ vacancy.job_desc }}</td>
+                    <td class="col-md">{{ vacancy.start_date | date:'dd/MM/yyyy'}}</td>
+                    <td class="col-md">{{ vacancy.close_date | date:'dd/MM/yyyy' }}</td>
+                    <td class="col-md">
+    
+                        <button>Interview</button>
+                    </td>
+                </tr>
+            
+            </tbody>
+          </table>
+    
+      </div>
+    </div>

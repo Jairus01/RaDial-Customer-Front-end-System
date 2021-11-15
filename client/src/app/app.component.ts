@@ -1,10 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TokenStorageService } from './Shared/_services/token-storage.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Rajang-Blue-Collar-Web-App';
+export class AppComponent implements OnInit {
+
+
+  constructor() { }
+
+  ngOnInit(): void {
+    
+  }
+
+ 
 }

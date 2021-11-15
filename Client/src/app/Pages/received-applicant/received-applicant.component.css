@@ -1,0 +1,58 @@
+.dashboard-header {
+    margin: 50px ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shorlist-card a{
+    text-decoration: none;
+    display: inline-block;
+    background-color: #FFF48E;
+    color: black;
+    text-align: center;
+    margin:20px;
+    width: 200px;
+    height: 170px;
+}
+.shorlist-card a span:first-child{
+    display: block;
+    padding-top: 50px;
+}
+
+.example-container button{
+    background-color: #F4DC05;
+    color: white;
+    margin:0 10px;
+    width: 150px;
+}
+
+table button,
+table a{
+    background-color: #F4DC05;
+    color: white;
+    border-radius: 0.4vw;
+    margin:0 10px;
+    width: 150px;
+    text-decoration: none;
+}
+
+table td, table th{
+  vertical-align: middle;
+}
+
+
+
+
+
+  .col-xs {
+    width: 2%;
+  }
+  
+  .col-sm {
+    width: 10%;
+  }
+  
+  .col-md {
+    width: 20%;
+  }

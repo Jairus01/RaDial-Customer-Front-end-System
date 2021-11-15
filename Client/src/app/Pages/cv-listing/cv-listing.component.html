@@ -1,0 +1,54 @@
+
+<div id="custom-background">
+
+	<div class="some-text">
+		<!-- <div id="menu">Menu</div> -->
+		<div id="search">
+			  <input type="text" placeholder="Search.." [(ngModel)]="searchText">
+			  <p>cv --> cv-card: {{ searchText }}</p>
+			  <p>Filter to the right side</p>
+			  <p>Limit amount of CV shown acc. to user's package</p>
+			  <p>Add another button to "lock" the cv</p>
+		</div>
+		<button id="filter-button" (click)="triggerFilterPanel()"><i class="fa fa-filter"></i>Filter</button>
+		<div *ngIf="showFilterPanel" class="form-group">
+			<form>
+				<p>Filter button clicked</p>
+				<p>Age: Between <input type="number"> and <input type="number"> years old</p>
+				<p>
+					Highest Education:
+					<select>
+						<option *ngFor="let edu of highest_edu_level">{{edu}}</option>
+					</select>Start from SPM level
+				</p>
+				<p>
+					Job Expertise: 
+					<select>
+						<option *ngFor="let job of jobs">{{job}}</option>
+					</select>
+					
+				</p>
+				<p>Working experience: <input type="number"> and <input type="number"> years</p>
+				<p>
+					Personality:
+					<select>
+						<option *ngFor="let personality of personalities">{{personality}}</option>
+					</select>
+				</p>
+				
+
+				<button (click)="filterCV()">Filter</button>
+				<input type="reset"/>
+			</form>
+		</div>
+		
+		<!-- make this whole part modular simport directly from a module-->
+		<div id="cards-grid">
+			<app-cv-card *ngIf="!showFilterPanel" [searchText]="searchText"></app-cv-card>
+			<!-- alternate between search and filter, if search then pass in search text
+			if filtering, then hide the current one and show new cards -->
+			<!--<app-cv-card *ngIf="showFilterPanel"></app-cv-card>-->
+		</div>
+	</div>
+	
+</div>

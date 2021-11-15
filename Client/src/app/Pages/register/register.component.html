@@ -1,0 +1,65 @@
+<div class="col-md-12">
+  
+  <div class="card card-container  ">
+    
+    <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate action="login">
+      <h1>Register</h1>
+      <div class="container">
+        <div class="half-container left-container">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" name="email" [(ngModel)]="form.email" required email #email="ngModel" />
+            <div class="alert-danger" *ngIf="email.errors && f.submitted">
+              <div *ngIf="email.errors.required">Email is required</div>
+              <div *ngIf="email.errors.email"> Email must be a valid email address </div>
+            </div>
+          </div>
+          <div class="half left">
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" />
+              <div class="alert-danger" *ngIf="password.errors && f.submitted">
+                <div *ngIf="password.errors.required">Password is required</div>
+                <div *ngIf="password.errors.minlength"> Password must be at least 6 characters </div>
+              </div>
+            </div>
+          </div>
+          <div class="half right">
+            <div class="form-group">
+              <label for="cfm password">Confirm Password</label>
+              <input type="password" class="form-control" name="cfmpassword" [(ngModel)]="form.cfmpassword" required minlength="6" #cfmpassword="ngModel" pattern="{{ password.value }}" />
+              <div class="alert-danger" *ngIf="cfmpassword.errors && f.submitted">
+                <div *ngIf="cfmpassword.errors.pattern"> Password & Confirm Password does not match.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="half-container right-container">
+          <div class="form-group">
+            <label for="cname">Company Name</label>
+            <input type="text" class="form-control" name="cname" [(ngModel)]="form.cname" required cname #cname="ngModel" />
+            <div class="alert-danger" *ngIf="cname.errors && f.submitted">
+              <div *ngIf="cname.errors.required">Company Name is required</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="cname">Company Address</label>
+            <textarea class="form-control"  name="caddress" [(ngModel)]="form.caddress"  caddress #caddress="ngModel"  name="caddress" required></textarea>
+          </div>
+        </div>
+        <div>
+          <button type="submit">Register</button>
+          <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed"> Signup failed! <br />{{ errorMessage }}
+          </div>
+          
+        </div>
+      </div>
+    </form>
+    <div class="alert " *ngIf="isSuccessful">
+      Your registration is successful!<br />
+    </div>
+
+    
+  </div>
+
+</div>
